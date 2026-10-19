@@ -73,7 +73,7 @@ Cold launches on the iPhone Duo simulator, screenshot of the inner display 5–7
 
 | | Unfolded, stock | Unfolded, with the fix | Folded, stock |
 |---|---|---|---|
-| `v4/` react-native-screens 4.30.0 | 0/3 tab bar shown | 3/3 | tab bar shown |
+| `v4/` react-native-screens 4.30.0 | 0/3 tab bar shown | 3/3 | tab bar shown (checked with the root `Stack` layout below) |
 | `v5/` react-native-screens 5.0.0-alpha.4 | 0/3 | 3/3 | tab bar shown |
 | `uikit-repro/` (no React Native) | 0/3 | 3/3 (`PREFRAME=1`) | — |
 
