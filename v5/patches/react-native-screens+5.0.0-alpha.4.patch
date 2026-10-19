@@ -1,0 +1,15 @@
+diff --git a/node_modules/react-native-screens/ios/tabs/host/RNSTabsHostComponentView.mm b/node_modules/react-native-screens/ios/tabs/host/RNSTabsHostComponentView.mm
+index e508e91..d1be425 100644
+--- a/node_modules/react-native-screens/ios/tabs/host/RNSTabsHostComponentView.mm
++++ b/node_modules/react-native-screens/ios/tabs/host/RNSTabsHostComponentView.mm
+@@ -128,6 +128,10 @@ namespace react = facebook::react;
+ - (void)didMoveToWindow
+ {
+   if (self.window != nil && _controller.parentViewController == nil) {
++    // The controller's view was loaded while detached, at the main screen's size (the cover display on a
++    // foldable). Size it to the host before attaching: pinned with the stale frame, the later resize changes
++    // no size class and UIKit never builds the side-rail tab bar (iPhone Duo, iOS 27.1, launched unfolded).
++    _controller.view.frame = self.bounds;
+     BOOL mountResult = [RNSContainerHelpers addChildViewController:_controller
+                                           toViewControllerManaging:self.reactSuperview
+                                                  withContainerView:self];

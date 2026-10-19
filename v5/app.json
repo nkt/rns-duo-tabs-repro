@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "RNSDuoTabsV5",
+    "slug": "rns-duo-tabs-repro-v5",
+    "scheme": "rnsduotabsv5",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "dev.repro.rnsduotabs.v5"
+    },
+    "plugins": ["expo-router"]
+  }
+}
